@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <title>recursion</title>
+   <body>
+      <script>
+         /*function dosomthing(action){
+            console.log(`i am ${action}`)
+            dosomething(action)
+         }
+         dosomthing("running")*/
+
+         /*function dosomthing(n){
+            if(n===0){
+            console.log("task completed")
+            return
+            }
+            console.log("i am working")
+            dosomthing(n-1)
+         }
+         dosomthing(3)*/
+
+         function factorial(n){
+            if(n===1){
+               return 1
+            }
+            return n*factorial(n-1)
+         }
+         let f=factorial(5)
+         console.log(f)
+
+      </script>
+   </body>
+</html>

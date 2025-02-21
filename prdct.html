@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <title>discount on products</title>
+   <body>
+      <script>
+        function caluculatetotalprice(p1,p2,p3){
+         return p1+p2+p3;
+        }   
+           function applydiscount(totalprice){
+            return totalprice-(totalprice*50/100);
+           }
+           function adddeliverycharges(finalprice){
+            var deliverycharge=50;
+            return finalprice+deliverycharge;
+           }
+           function displayfinalprice(p1,p2,p3){
+            var total=caluculatetotalprice(p1,p2,p3);
+            var discountprice=applydiscount(total);
+            var deliveryprice=adddeliverycharges(discountprice)
+            console.log("totalprice before discount: " + total);
+            console.log("totalprice after discount: " + discountprice);
+            console.log("finalprice after adding deliverycharges: " + deliveryprice);
+           }
+           displayfinalprice(500,1000,1500)
+      </script>
+   </body>
+</html>

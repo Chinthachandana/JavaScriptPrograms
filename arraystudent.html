@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+   <title>Student Marks</title>
+   <body>
+      <script>
+        studentmarks=[23,32,36,87,85,90,100]
+         console.log(studentmarks)
+         studentmarks.sort((a,b)=>a-b)
+         console.log(studentmarks)
+         studentmarks.reverse()
+         console.log(studentmarks)
+         console.log(studentmarks.at(5))
+         console.log(studentmarks.indexOf(87))
+         console.log(studentmarks.indexOf(45))
+         console.log(studentmarks.lastIndexOf(23))
+         studentmarks.push(5)
+         console.log(studentmarks)
+         studentmarks.pop()
+         console.log(studentmarks)
+         studentmarks.unshift(1)
+         console.log(studentmarks)
+         studentmarks.shift()
+         console.log(studentmarks)
+         studentmarks.splice(1,1,12,13)
+         console.log(studentmarks)
+         studentmarks.splice(1,3,12,13)
+         console.log(studentmarks)
+         let s1=studentmarks.slice(2,5)
+         console.log(s1)
+         let s2=s1.join("-")
+         console.log(s2)
+
+
+         /*submarks=[64,32,36,87,85,30,100]
+         let r1=submarks.reduce((a,b)=>a+b)
+         console.log(r1)
+         let r2=submarks.map(a=>a+3)
+         console.log(r2)
+         let r3=submarks.filter(a=>a>80)
+         console.log(r3)
+         let r4=submarks.every(a=>a>=30)
+         console.log(r4)
+         let r5=submarks.every(a=>a%2===0)
+         console.log(r5)
+         let r6=submarks.some(a=>a>100)
+         console.log(r6)  //console.log(r1,r2,r3,r4,r5,r6)
+         let r7=submarks.find(a=>a>32)//it searches grom left to right
+         console.log(r8)*/
+      </script>
+   </body>
+</html>

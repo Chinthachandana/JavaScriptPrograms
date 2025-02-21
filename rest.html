@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <title>rest parameters</title>
+   <body>
+      <script>
+         function total(...items){
+            let s=0;
+            for(let i=0;i<3;i++){
+                s=s+items[i];           
+            }
+            console.log(s);
+         }
+         total(0,8,4)
+         total(5,2,6)
+      </script>
+   </body>
+</html>

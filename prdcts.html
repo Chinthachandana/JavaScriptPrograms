@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+   <title>diff prices on products</title>
+   <body>
+      <script>
+         function caluculatetotalprice(p1,p2,p3){
+            return p1+p2+p3;
+         }
+         function applydiscount(price,discount){
+            return price-(price*discount/100);
+         }
+         function adddeliverycharges(price,deliverycharges){
+            return price+deliverycharges;
+         }
+         function displayfinalprice(p1,p2,p3,d1,d2,d3,dc1,dc2,dc3){
+            var dp1=applydiscount(p1,d1);
+            var dp2=applydiscount(p2,d2);
+            var dp3=applydiscount(p3,d3);
+
+            var fp1=adddeliverycharges(dp1,dc1);
+            var fp2=adddeliverycharges(dp2,dc2);
+            var fp3=adddeliverycharges(dp3,dc3); 
+
+            var totalbeforedis=caluculatetotalprice(p1,p2,p3);
+            var totalafterdis=caluculatetotalprice(dp1,dp2,dp3);
+            var finalprice=caluculatetotalprice(fp1,fp2,fp3);
+
+            console.log("totalprice before discount: " + totalbeforedis);
+            console.log("totalprice afterdiscount: " + totalafterdis)
+            console.log("finalprice aftrdlvrychrgs:" + finalprice)
+
+         }
+         displayfinalprice(500,1000,1500,10,20,30,40,50,60);
+      </script>
+   </body>
+</html>
