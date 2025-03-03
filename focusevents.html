@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>events: focus related events</title>
+
+<head>
+   <script>
+      function fun1() {
+        let data=document.getElementById("i1").value
+         if (data == "") {
+           // alert("name should not be empty")
+           document.getElementById("s1").innerHTML
+            document.getElementById("i1").focus()
+            document.getElementById("s3").innerHTML="name should not be empty"
+
+         }
+         else{
+            //.getElementById("s2").innerHTML="city should not be empty"
+            document.getElementById("i2").focus()
+         }
+      }
+   </script>
+</head>
+
+<body>
+   Enter a name:<span id="s1" style="color: red;">*</span><br>
+   <input type="text" id="i1" onblur="fun1()">
+   <br>
+   <span id="s3" style="color: red;"></span>
+   <br>
+   Enter your city: <span id="s3" style="color: red;">*</span> <br>
+   <input type="text" id="i2">
+</body>
+
+</html>

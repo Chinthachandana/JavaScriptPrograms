@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <input type="text" id="i1"><br>
+      <input type="text" id="i2"><br>
+      <input type="radio" id="i3" name="gender"><br>
+      <input type="radio" id="i4" name="gender"><br>
+      <p></p>
+      <p></p>
+      <p></p>
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <span class="c1"></span>
+      <span class="c2"></span>
+      <script>
+       document.getElementById("i1").value="one"
+       document.getElementById("i2").value="two"
+       let ar1=document.getElementsByName("gender")
+       ar1[0].checked=true
+       let ar2= document.getElementsByTagName("p")
+       ar2[0].innerHTML="three"
+       ar2[1].innerHTML="four"
+       ar2[2].innerHTML="five"
+       let ar3= document.getElementsByClassName("c1")
+       ar3[0].innerHTML= ar3[1].innerHTML="six"
+       let ar4= document.getElementsByClassName("c2")
+       ar4[0].innerHTML= ar4[1].innerHTML="seven"
+      </script>
+   </body>
+</html>

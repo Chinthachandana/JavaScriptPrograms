@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<title>events: key related events</title>
+
+<head>
+   <script>
+      let words = ["java", "python", "C", "core java", "kotlin", "advance java", "CPP"]
+      function fun1() {
+         let userinput = document.getElementById("i1").value
+         console.log(userinput)
+
+         let filteredwords = words.filter((w) => w.startsWith(userinput))
+         console.log(filteredwords)
+
+         let response =""
+         filteredwords.forEach((fw) => { response = response + "<li>" + fw + "<li>" })
+         document.getElementById("i2").innerHTML = response
+      }
+   </script>
+</head>
+
+<body>
+   Enter a word: <input id="i1" type="text" onkeyup="fun1()">
+   <ul id="i2">
+
+   </ul>
+</body>
+
+</html>
