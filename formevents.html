@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>events: form related events</title>
+
+<head>
+   <script>
+      function fun1() {
+         let user = document.getElementById("t1").value
+         let eml = document.getElementById("t2").value
+         if (user == "") {
+            alert("name should not be empty")
+            return false
+         }
+        if (eml == "") {
+            alert("mail should not be empty")
+            return false
+         }
+         else {
+            alert("data is okay")
+            return true
+         }
+      }
+      function fun2() {
+         let flag = confirm("are you sure to delete data?")
+         if (flag == true) {
+            return true
+         }
+         else{
+            return false
+
+         }
+      }
+
+   </script>
+</head>
+
+<body>
+   <form action="serverpage1" onsubmit=" return fun1()" onreset=" return fun2()">
+      <table align="center">
+         <caption fontsize="70px" align="center"><b>employee data</b></caption>
+         <tr>
+            <td><label>Enter your name</label></td>
+            <td><input type="text" id="t1"></td>
+         </tr>
+         <tr>
+            <td><label>Enter your mail</label></td>
+            <td><input type="text" id="t2"></td>
+         </tr>
+         <tr>
+            <td><label>Enter your city</label></td>
+            <td><input type="text" id="t3"></td>
+         </tr>
+         <tr>
+            <td><input type="submit" id="t3" value="submit"></td>
+            <td><input type="reset" id="t4" value="reset"></td>
+         </tr>
+      </table>
+   </form>
+</body>
+
+</html>
